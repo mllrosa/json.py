@@ -13,3 +13,22 @@ Estrutura do JSON
 Objetos são representados por pares chave-valor (semelhante a um dicionário ou mapa).
 Arrays (ou listas) são representados por valores entre colchetes [].
 Exemplo de um objeto JSON (semelhante a um dicionário em Python):
+
+
+
+
+Converter um dicionário para JSON:
+json_str = json.dumps({"nome": "João", "idade": 25})
+
+Converter JSON para dicionário:
+pessoa = json.loads('{"nome": "João", "idade": 25}')
+
+
+Gravar e ler JSON em arquivos:
+Gravar:
+with open("dados.json", "w") as f:
+    json.dump(dados, f)
+
+Ler:
+with open("dados.json", "r") as f:
+    dados = json.load(f)
